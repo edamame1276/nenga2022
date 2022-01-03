@@ -8,14 +8,7 @@
     <a-scene embedded arjs="debugUIEnabled:false; sourceType: webcam;" vr-mode-ui="enabled: false">
         <!-- 対象の AR マーカーを指定 -->
         <a-marker type="pattern" preset="custom" url="./marker/pattern-iti.patt">
-            <!-- 虎のモデルを配置 -->
-            <a-assets>
-            <img id="tora1" src="./model/tora1.png">
-            </a-assets>
-            
-            <a-entity position="300 0 -400" scale="5 5 5" animation="property: position; to: 300 600 -400; loop: true; dur: 3000;">
-            <a-image width="54" height="30" src="#tora1"></a-image>
-            </a-entity>
+            <a-box position="0 -1 0" scale="1 1 1" color="grey"></a-box>
         </a-marker>
         <a-entity camera></a-entity>
     </a-scene>
