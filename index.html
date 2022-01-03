@@ -4,10 +4,20 @@
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   <body style="margin: 0px; overflow: hidden;">
     <a-scene embedded arjs>
+      <a-assets>
+        <img id="tora" src="model/tora.png">
+      </a-assets>
       <a-marker type="pattern" url="marker/pattern-iti.patt">
+        
         <a-box position="0 -1 0" scale="1 1 1" color="grey"></a-box>
-        <a-text value="Happy New Year!\nIntelligent Technology" position=" 0 0 10" align="center" rotation="-90 0 0" color="#DD4827">
+        
+        <a-text value="Happy New Year!" position=" 0 0 1" align="center" rotation="-90 0 0" color="#DD4827">
         </a-text>
+        
+        <a-entity position="300 0 -400" scale="5 5 5" animation="property: position; to: 300 600 -400; loop: true; dur: 3000;">
+        <a-image width="54" height="30" src="#tora"></a-image>
+        </a-entity>
+
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
